@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*All colors*/
+:root{
+    --mainColor: #e2e2e2;
+    --secondColor: #247ba0;
+    --thirdColor: #605f5e;
+    --fourthColor: #fb3640;
+    --fifthColor: #0a2463;
+}
+
+header{
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5); /*Under shadow*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 2rem 2rem;
+    background-color: var(--mainColor);
+    color: var(--fifthColor);
+}
+
+nav a{
+    margin: 0 2rem;
+    color: var(--fifthColor);
+    text-decoration: none;
+}
+
+/*The color when we select the option*/
+nav a:hover{
+    color: var(--fourthColor); 
+}  
+
+header .nav-btn{
+    padding: 5px;
+    cursor: painter;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--fifthColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+.list-options {
+    list-style: none;
+}
+
+@media (max-width: 35em){
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+        color: var(--fifthColor); 
+    }
+
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        inset: 0 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        transition: 1s;
+        transform: translateX(150vh);
+        padding: min(30vh, 10rem) 2em;
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+
+    header .responsive_nav{
+        transform: none;
+    }   
+    
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        color: var(--fifthColor); 
+    }
+
+    nav a{
+        font-size: 1.8rem;
+    }
+
+    li{
+        font-size: 1.8rem;
+    }
+}
