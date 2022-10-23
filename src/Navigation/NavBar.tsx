@@ -12,6 +12,7 @@ export default function NavBar() {
 
     const showNavbar = () => {
         navRef.current?.classList.toggle("responsive_nav")
+        setOpen(false)
     }
 
     type AProps = { navTo: string, text: string }
