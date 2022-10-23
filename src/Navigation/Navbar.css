@@ -14,7 +14,7 @@
 }
 
 header{
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5); /*Under shadow*/
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3); /*Under shadow*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,27 +36,27 @@ nav a:hover{
 }  
 
 header .nav-btn{
-    padding: 5px;
-    cursor: painter;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--fifthColor);
     visibility: hidden;
-    opacity: 0;
-    font-size: 1.8rem;
-}
-
-.list-options {
-    list-style: none;
 }
 
 @media (max-width: 35em){
+
     header .nav-btn{
+        padding-top: 5px;
+        cursor: painter;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: var(--fifthColor);
         visibility: visible;
         opacity: 1;
-        color: var(--fifthColor); 
+        font-size: 1.8rem;
     }
+
+    /*The color when we select the option*/
+    header .nav-btn:hover{
+        color: var(--fourthColor); 
+    }  
 
     header nav{
         position: fixed;
@@ -82,7 +82,7 @@ header .nav-btn{
     
     nav .nav-close-btn {
         position: absolute;
-        top: 2rem;
+        top: 1rem;
         right: 2rem;
         color: var(--fifthColor); 
     }

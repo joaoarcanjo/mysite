@@ -32,9 +32,9 @@ export default function NavBar() {
     return (
         <header>
             <a>João Arcanjo</a>
-            <nav ref={navRef} className="flex items-center">
+            <nav ref={navRef}>
                 <NavElements/>
-            <button className='nav-btn nav-close-btn'>
+                <button className='nav-btn nav-close-btn'>
                     <FaTimes onClick={showNavbar}/>
                 </button>
             </nav>
