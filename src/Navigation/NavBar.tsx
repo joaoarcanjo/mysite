@@ -25,16 +25,19 @@ export default function NavBar() {
 
         return (
             <>
-                <NavElement key={'about'} navTo='about' text='About'/>
+                <NavElement key={'about'} navTo='' text='About'/>
                 <NavElement key={'hobbies'} navTo='hobbies' text='Hobbies'/>
                 <NavElement key={'contacts'} navTo='contacts' text='Contacts'/>
+                <NavElement key={'qualifications'} navTo='qualifications' text='Qualifications'/>
             </>
         )
     }
 
     return (
         <header>
-            <a>João Arcanjo</a>
+            <NavLink className="logo" to="">
+                <span>João Arcanjo</span>
+            </NavLink>
             <nav ref={navRef}>
                 <NavElements/>
                 {isOpen &&

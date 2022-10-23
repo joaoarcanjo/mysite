@@ -6,11 +6,11 @@
 
 /*All colors*/
 :root{
-    --mainColor: #e2e2e2;
+    --mainColor: #FFFFFF;
     --secondColor: #247ba0;
     --thirdColor: #605f5e;
-    --fourthColor: #fb3640;
-    --fifthColor: #0a2463;
+    --fourthColor: #F87060;
+    --fifthColor: #102542;
 }
 
 header{
@@ -37,6 +37,13 @@ nav a:hover{
 
 header .nav-btn{
     visibility: hidden;
+}
+
+header .logo {
+    font-family: "Times New Roman", Times, serif;
+    color:var(--fifthColor);
+    font-size: 22px;
+    text-decoration: none;
 }
 
 @media (max-width: 35em){
