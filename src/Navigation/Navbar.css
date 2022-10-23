@@ -42,7 +42,7 @@ header .nav-btn{
 @media (max-width: 35em){
 
     header .nav-btn{
-        padding-top: 5px;
+        padding-top: 9px;
         cursor: painter;
         background: transparent;
         border: none;
@@ -69,7 +69,7 @@ header .nav-btn{
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        transition: 1s;
+        transition: 0.4s;
         transform: translateX(150vh);
         padding: min(30vh, 10rem) 2em;
         background: hsl(0 0% 100% / 0.1);
