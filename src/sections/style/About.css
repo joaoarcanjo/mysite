@@ -10,24 +10,25 @@
   color: #102542;
 }
 
-.about-title {
-  padding-top: 32px;
+.title {
   font-family: 'Encode Sans', sans-serif;
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.about-title {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 32px;
   display: inline-block;
 	/*position: relative;*/
 }
 
 .about-subtitle {
   font-size: 12px;
-  text-align: left;
-	position: absolute;
-	top: 100%;
-	left: 0px;
-  -webkit-user-select: none; /* Safari */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-.about-title:hover {
+.title:hover {
   color:#F87060;
   text-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transform: scale(1.1);

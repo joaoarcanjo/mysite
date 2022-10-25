@@ -4,13 +4,10 @@ function About() {
     return (
         <div className="all-page">
             <div className="main-section">
-                <div></div>
-                    <h1 className="about-title">
-                        I'm João Arcanjo
-                        <span className="about-subtitle">
-                            (Just Arcanjo, for friends)
-                        </span>
-                    </h1>
+                <div className="title">
+                    <p className="about-title"> I'm João Arcanjo </p>
+                    <p className="about-subtitle"> (Just Arcanjo, for friends) </p>
+                </div>
                 <div className="my-photo">
                     <img src={require('./style/me.jpeg')}/>
                 </div>
