@@ -23,6 +23,8 @@
 	position: absolute;
 	top: 100%;
 	left: 0px;
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .about-title:hover {
