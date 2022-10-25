@@ -70,17 +70,17 @@ header .logo {
         top: 0;
         left: 0;
         height: 100%;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 0%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        transition: 0.4s;
+        transition: 0.5s;
         transform: translateX(150vh);
-        padding: min(30vh, 10rem) 2em;
+        padding: min(30vh, 10rem) 3em;
         background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(1rem);
+        backdrop-filter: blur(2rem);
     }
 
     header .responsive_nav{
