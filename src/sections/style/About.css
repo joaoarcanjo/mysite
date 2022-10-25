@@ -1,12 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
+
 .all-page{
   height: 100vh;
   width: 100vw;
-  background-color: #CDD7D6;
 }
 
 .main-section {
   text-align: center;
   color: #102542;
+}
+
+.about-title {
+  padding-top: 32px;
+  font-family: 'Encode Sans', sans-serif;
+  display: inline-block;
+	position: relative;
+}
+
+.about-subtitle {
+  font-size: 12px;
+  text-align: left;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+}
+
+.about-title:hover {
+  color:#F87060;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out 0.1s;
 }
 
 .my-photo{

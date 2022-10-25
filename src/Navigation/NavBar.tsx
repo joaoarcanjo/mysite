@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-//import "./Style.css"
 import "./Navbar.css"
 
 export default function NavBar() {
@@ -15,9 +14,7 @@ export default function NavBar() {
         setOpen(false)
     }
 
-    type AProps = { navTo: string, text: string }
-
-    const NavElement = ({navTo, text}: AProps) => {
+    const NavElement = ({navTo, text}: { navTo: string, text: string }) => {
         return <span onClick={showNavbar}><NavLink to={navTo}>{text}</NavLink></span>
     }
 
