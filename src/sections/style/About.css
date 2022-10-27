@@ -11,17 +11,8 @@
 }
 
 .title {
-  font-family: 'Encode Sans', sans-serif;
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-.about-title {
-  font-size: 30px;
-  font-weight: bold;
-  padding-top: 32px;
-  display: inline-block;
-	/*position: relative;*/
 }
 
 .about-subtitle {
