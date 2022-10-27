@@ -22,11 +22,7 @@ function AppRouter() {
 }
 
 function App() {
-  return (
-    <>
-      <AppRouter/>
-    </>
-  )
+  return <AppRouter/>
 }
 
 
