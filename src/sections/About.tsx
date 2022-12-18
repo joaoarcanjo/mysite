@@ -4,6 +4,10 @@ import { MdEmail, MdSmartphone } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs"
 import { CiLinkedin } from "react-icons/ci"
 import { BsGithub, BsInfoCircle } from "react-icons/bs"
+import { useState } from "react";
+import { BiDownArrow, BiUpArrow } from "react-icons/bi"
+
+const footerIconsColor = {color: "#CDD7D6"}
 
 function Contacts() {
     
@@ -28,35 +32,58 @@ function Contacts() {
     )
 }
 
-function Projects() {
+function ProjectItem() {
 
-    const divStyle = {
-        background: 'white'
-    };
+    const [moreInfo, showMoreInfo] = useState(false)
+
+    return (
+        <div className="bg-whiteColor lg:flex border-2 rounded-md p-2 w-full">
+            <div className="flow-root pt-2 mb-2">
+                <p className="float-left text-xl text-fifthColor">
+                    QRreport
+                </p>
+                <button className="animate-bounce float-right" onClick={() => showMoreInfo(!moreInfo)}>
+                    {!moreInfo && <BiDownArrow size={30}></BiDownArrow>}
+                    {moreInfo && <BiUpArrow size={30}></BiUpArrow>}
+                </button> 
+            </div>
+            {moreInfo &&
+            <>
+                <hr className="h-px bg-fifthColor"/>
+                <div className="pt-4">
+                    <p>This project was developed as a final project for my degree. The objective was to develop a system to make it easier to report anomalies that may occur in a company, using only a telephone and a qrcode that is close to the faulty device.
+It includes the development of a database, a backend server and a web application for the user to interact with the system.
+                    </p>
+                </div>
+            </>}
+        </div>
+    )
+}
+
+function Projects() {
     
     return (
-        <div className="space-y-5 grid place-items-center">
+        <div className="space-y-3 grid place-items-center w-80">
             <h1 className="pt-3 flex justify-center mb-4 text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
                 My Projects
             </h1>
-            <p>Some projects will appear here</p>
+            <ProjectItem/>
         </div> 
     )
 }
 
-const footerIconsColor = {color: "#CDD7D6"}
-
 function Footer() {
     return (
+        //TODO: colocar todos os links num ficheiro para ser mais facil alterar futuramente.
         <footer className="bg-fifthColor text-center w-full">
                 <div className="m-2">
                     <a href="https://www.instagram.com/joao__arcanjo/" type="button" style={footerIconsColor} className="rounded-full border-2 leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <BsInstagram style={footerIconsColor} className="w-5 h-full mx-auto"></BsInstagram>
                     </a>
-                    <a href="#!" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-arcanjo-8b86131b9/" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <CiLinkedin style={footerIconsColor} className="w-6 h-full mx-auto"></CiLinkedin>
                     </a>
-                    <a href="#!" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://github.com/joaoarcanjo" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <BsGithub style={footerIconsColor} className="w-5 h-full mx-auto"></BsGithub>
                     </a>
                     <a href="#!" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
@@ -72,7 +99,7 @@ function Footer() {
 
 function MainInfo() {
     return (
-        <div className="space-y-5 px-10 py-10">
+        <div className="space-y-5 px-10 py-5">
             <div className="title space-y-2">
                 <h1 className="pt-3 flex justify-center text-5xl font-bold tracking-tight text-fifthColor hover:text-fourthColor md:text-5xl lg:text-6xl dark:text-white">João Arcanjo</h1>
                 <p> (Just Arcanjo, for friends) </p>
@@ -89,11 +116,9 @@ function MainInfo() {
 
 function About() {
     return (
-        <div className="space-y-5 grid place-items-center h-screen">
-            <div>
-                <MainInfo/>
-            </div>
-            <div className="space-y-5 divide-y">
+        <div className="grid place-items-center h-screen">
+            <MainInfo/>
+            <div className="space-y-5 divide-y px-10 py-10">
                 <div></div>
                 <Projects/>
                 <Contacts/>

@@ -5,9 +5,10 @@ module.exports = {
     colors: {
       thirdColor: '#CDD7D6',
       fourthColor: '#F87060',
-      fifthColor: '#102542'
+      fifthColor: '#102542',
+      whiteColor: '#FFFFFF'
     },
-    extend: {},
+    extend: {}
   },
   plugins: [],
 }
