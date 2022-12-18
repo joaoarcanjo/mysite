@@ -108,7 +108,7 @@ function MainInfo() {
                 <p className="text-justify mb-3 text-fifthColor first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-fifthColor first-letter:mr-3 first-letter:float-left">
                     I'm João Arcanjo, 21 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student.
                 </p>
-                <img className="border-t-8 border-fifthColor" src={require('./style/me.jpeg')}/>
+                <img className="border-t-8 border-fifthColor" alt="" src={require('./style/me.jpeg')}/>
             </div>
         </div>
     )
