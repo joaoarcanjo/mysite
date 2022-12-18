@@ -97,7 +97,6 @@ function About() {
                 <div></div>
                 <Projects/>
                 <Contacts/>
-                <p>Some projects will appear here</p>
             </div>
             <Footer/>
         </div>
