@@ -24,7 +24,6 @@ export default function NavBar() {
             <>
                 <NavElement key={'about'} navTo='' text='About'/>
                 <NavElement key={'hobbies'} navTo='hobbies' text='Hobbies'/>
-                <NavElement key={'contacts'} navTo='contacts' text='Contacts'/>
                 <NavElement key={'qualifications'} navTo='qualifications' text='Qualifications'/>
             </>
         )

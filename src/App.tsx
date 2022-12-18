@@ -4,7 +4,6 @@ import Qualifications from './sections/Qualifications';
 import { Hobbies } from './sections/Hobbies';
 import NavBar from './Navigation/NavBar';
 import "./App.css";
-import Contacts from './sections/Contacts';
 import Home from './sections/About';
 
 function AppRouter() {
@@ -15,7 +14,6 @@ function AppRouter() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/qualifications" element={<Qualifications/>}></Route>
           <Route path="/Hobbies" element={<Hobbies/>}></Route>
-          <Route path="/Contacts" element={<Contacts/>}></Route>
         </Routes>
       </Router>
   )
