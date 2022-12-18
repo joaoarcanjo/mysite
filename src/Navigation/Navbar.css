@@ -22,6 +22,7 @@ header{
     padding: 2rem 2rem;
     background-color: var(--mainColor);
     color: var(--fifthColor);
+    min-width: 400px;
 }
 
 nav a{
@@ -46,7 +47,7 @@ header .logo {
     text-decoration: none;
 }
 
-@media (max-width: 35em){
+@media (max-width: 50em){
 
     header .nav-btn{
         padding-top: 9px;
