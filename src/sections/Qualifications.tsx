@@ -27,8 +27,8 @@ function Master() {
             </div>
             <div className="space-y-1">
                 <p></p>
-                <p>Final media: -</p>
-                <p>Final tese grade: -</p>
+                <p>Final media: --</p>
+                <p>Final tese grade: --</p>
             </div>
         </div>
     )
