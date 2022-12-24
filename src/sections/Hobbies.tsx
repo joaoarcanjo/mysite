@@ -1,3 +1,4 @@
+import { useMenuState } from "../Navigation/OpenMenu"
 import { Footer } from "./components/Footer"
 
 type Hobbie = {
@@ -17,6 +18,7 @@ function HobbieElement({hobbie}: {hobbie: Hobbie}) {
 }
 
 function MainInfo() {
+    
     return (
         <div className="space-y-5 px-10 py-5">
             <h1 className="pt-3 flex justify-center text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">My Hobbies</h1>
@@ -24,7 +26,7 @@ function MainInfo() {
     )
 }
 
-export function Hobbies() {
+function HobbiesInfo() {
 
     let hobbies: Hobbie[] = [
         {
@@ -44,14 +46,22 @@ export function Hobbies() {
             //Taking pictures is one of the things I like to do most in my spare time, namely when I'm going to discover some new place, you can find some of my work <a href="https://www.instagram.com/arcanjo_eye/" className="no-underline hover:underline">here</a>.
         }   
     ]
-
+    
     return (
-        <div className="grid place-items-center h-screen space-y-5">
+        <div className="grid place-items-center w-80">
+            { hobbies.map(value => <HobbieElement hobbie={value}/>) }
+        </div> 
+    )
+}
+
+export function Hobbies() {
+    return (
+        <div className="grid place-items-center h-screen">
             <MainInfo/>
             <div className="space-y-5 px-10">
-                { hobbies.map(value => <HobbieElement hobbie={value}/>) }
+                <HobbiesInfo/>
             </div>
             <Footer/>
         </div>
-    )
-} 
+    )   
+}

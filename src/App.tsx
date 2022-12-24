@@ -1,10 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Qualifications from './sections/Qualifications';
 import { Hobbies } from './sections/Hobbies';
 import NavBar from './Navigation/NavBar';
 import "./App.css";
 import About from './sections/About';
+import { OpenInContext } from './Navigation/OpenMenu';
 
 function AppRouter() {
   return (
@@ -20,7 +21,22 @@ function AppRouter() {
 }
 
 function App() {
-  return <AppRouter/>
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const currentOpenMenuContext = { 
+    isOpen: isMenuOpen,
+    setState: setMenuOpen
+}
+
+  return (
+    <div>
+      <OpenInContext.Provider value={currentOpenMenuContext}>
+          <AppRouter/>
+          <div></div>
+      </OpenInContext.Provider>
+    </div>
+  )
 }
 
 

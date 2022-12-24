@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css"
+import { useMenuState } from "./OpenMenu";
 
 export default function NavBar() {
 
-    const navRef = useRef<HTMLDivElement>(null)
+    const navRef = useRef<HTMLDivElement>(null);
+    const menuState = useMenuState();
 
     const [isOpen, setOpen] = useState(false)
 
@@ -37,13 +39,13 @@ export default function NavBar() {
             <nav ref={navRef}>
                 <NavElements/>
                 {isOpen &&
-                    <button onClick={() => setOpen(false)}  className='nav-btn nav-close-btn'>
+                    <button onClick={() => {setOpen(false); menuState?.setState(false)}}  className='nav-btn nav-close-btn'>
                         <FaTimes onClick={showNavbar}/>
                     </button>
                 }
             </nav>
             {!isOpen &&
-                <button onClick={() => setOpen(true)} className='nav-btn'>
+                <button onClick={() => {setOpen(true); menuState?.setState(true)}} className='nav-btn'>
                     <FaBars onClick={showNavbar}/>
                 </button>
             }

@@ -4,6 +4,7 @@ import { MdEmail, MdSmartphone } from "react-icons/md";
 import { useState } from "react";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi"
 import { Footer } from "./components/Footer";
+import { useMenuState } from "../Navigation/OpenMenu";
 
 function Contacts() {
     
@@ -30,7 +31,8 @@ function Contacts() {
 
 function ProjectItem() {
 
-    const [moreInfo, showMoreInfo] = useState(false)
+    const [moreInfo, showMoreInfo] = useState(false);
+    const menuState = useMenuState();
 
     return (
         <div className="bg-whiteColor lg:flex border-2 rounded-md p-2 w-full">
@@ -38,10 +40,11 @@ function ProjectItem() {
                 <p className="float-left text-xl text-fifthColor">
                     QRreport
                 </p>
-                <button className="animate-bounce float-right" onClick={() => showMoreInfo(!moreInfo)}>
-                    {!moreInfo && <BiDownArrow size={30}></BiDownArrow>}
-                    {moreInfo && <BiUpArrow size={30}></BiUpArrow>}
-                </button> 
+                {!menuState?.isOpen &&
+                    <button className="animate-bounce float-right" onClick={() => showMoreInfo(!moreInfo)}>
+                        {!moreInfo && <BiDownArrow size={30}></BiDownArrow>}
+                        {moreInfo && <BiUpArrow size={30}></BiUpArrow>}
+                    </button>}
             </div>
             {moreInfo &&
             <>
