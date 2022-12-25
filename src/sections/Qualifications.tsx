@@ -1,7 +1,7 @@
 import "./style/About.css"
 import { Footer } from "./components/Footer";
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { useMenuState } from "../Navigation/OpenMenu";
+//import { useMenuState } from "../Navigation/OpenMenu";
 
 function Master() {
 
