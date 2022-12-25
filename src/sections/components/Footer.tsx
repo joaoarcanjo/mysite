@@ -1,4 +1,4 @@
-import { BsInstagram, BsGithub, BsInfoCircle } from "react-icons/bs";
+import { BsInstagram, BsGithub } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
 import { ImLocation } from "react-icons/im";
 
