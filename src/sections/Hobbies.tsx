@@ -1,4 +1,4 @@
-import { useMenuState } from "../Navigation/OpenMenu"
+//import { useMenuState } from "../Navigation/OpenMenu"
 import { Footer } from "./components/Footer"
 
 type Hobbie = {

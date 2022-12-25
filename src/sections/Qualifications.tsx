@@ -5,7 +5,7 @@ import { useMenuState } from "../Navigation/OpenMenu";
 
 function Master() {
 
-    const menuState = useMenuState();
+    //const menuState = useMenuState();
     
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
