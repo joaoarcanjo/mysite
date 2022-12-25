@@ -18,10 +18,7 @@ export function Footer() {
                 <a href="https://github.com/joaoarcanjo" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <BsGithub style={footerIconsColor} className="w-5 h-full mx-auto"></BsGithub>
                 </a>
-                <a href="#!" type="button" style={footerIconsColor} className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-                    <BsInfoCircle style={footerIconsColor} className="w-5 h-full mx-auto"></BsInfoCircle>
-                </a>
-                <a href="#!" type="button" style={footerIconsColor} className="rounded-full border-2 w-9 h-9 m-1">
+                <a href="https://www.google.com/maps/place/Alverca+do+Ribatejo/@38.9049857,-9.0779098,11482m/data=!3m2!1e3!4b1!4m5!3m4!1s0xd1928c62b92311b:0x289b83fafe478842!8m2!3d38.9022048!4d-9.0397427" type="button" style={footerIconsColor} className="rounded-full border-2 w-9 h-9 m-1">
                     <ImLocation style={footerIconsColor} className="w-5 h-full mx-auto"></ImLocation>
                 </a>
             </div>

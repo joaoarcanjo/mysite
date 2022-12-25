@@ -14,6 +14,7 @@ export default function NavBar() {
     const showNavbar = () => {
         navRef.current?.classList.toggle("responsive_nav")
         setOpen(false)
+        menuState?.setState(false)
     }
 
     const NavElement = ({navTo, text}: { navTo: string, text: string }) => {
@@ -26,7 +27,7 @@ export default function NavBar() {
             <>
                 <NavElement key={'about'} navTo='' text='About'/>
                 <NavElement key={'hobbies'} navTo='hobbies' text='Hobbies'/>
-                <NavElement key={'school'} navTo='school' text='School'/>
+                <NavElement key={'qualifications'} navTo='qualifications' text='Qualifications'/>
             </>
         )
     }

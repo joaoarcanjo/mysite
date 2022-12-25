@@ -1,11 +1,11 @@
 import "./style/About.css"
 import { Footer } from "./components/Footer";
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-//import { useMenuState } from "../Navigation/OpenMenu";
+import { useMenuState } from "../Navigation/OpenMenu";
 
 function Master() {
 
-    //const menuState = useMenuState();
+    const menuState = useMenuState();
     
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
@@ -17,7 +17,9 @@ function Master() {
                     <p className="text-xl text-fifthColor">
                         FCUL (2022-
                     </p> 
-                    <AiOutlineLoading3Quarters className="float-right" size={15}></AiOutlineLoading3Quarters>
+                    {!menuState?.isOpen &&
+                        <AiOutlineLoading3Quarters className="animate-spin float-right" size={15}></AiOutlineLoading3Quarters>
+                    }
                     <p>)</p>
                 </div>
   
@@ -28,7 +30,7 @@ function Master() {
             <div className="space-y-1">
                 <p></p>
                 <p>Final media: --</p>
-                <p>Final tese grade: --</p>
+                <p>Tese grade: --</p>
             </div>
         </div>
     )
