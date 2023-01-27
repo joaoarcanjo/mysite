@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ["./src/**/*.{html,js,tsx}"],
   theme: {
@@ -8,7 +11,13 @@ module.exports = {
       fifthColor: '#102542',
       whiteColor: '#FFFFFF'
     },
-    extend: {}
+    extend: {
+      fontFamily: {
+        solitreo: ['"Solitreo"', ...defaultTheme.fontFamily.sans],
+        pressStart: ['"Press Start 2P"', ...defaultTheme.fontFamily.sans],
+        nunito: ['"Nunito"', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: [],
 }

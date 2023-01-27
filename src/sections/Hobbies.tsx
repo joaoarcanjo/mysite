@@ -21,7 +21,7 @@ function MainInfo() {
     
     return (
         <div className="space-y-5 px-10 py-5">
-            <h1 className="pt-3 flex justify-center text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">My Hobbies</h1>
+            <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fifthColor hover:text-fourthColor md:text-5xl lg:text-6xl dark:text-white">My Hobbies</h1>
         </div>
     )
 }

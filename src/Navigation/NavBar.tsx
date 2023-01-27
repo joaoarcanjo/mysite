@@ -18,7 +18,10 @@ export default function NavBar() {
     }
 
     const NavElement = ({navTo, text}: { navTo: string, text: string }) => {
-        return <span onClick={showNavbar}><NavLink to={navTo}>{text}</NavLink></span>
+
+        const className = isOpen ? "font-nunito font-extrabold text-4xl hover:animate-pulse" : "font-nunito font-extrabold text-2xl hover:animate-pulse"
+
+        return <span onClick={showNavbar}><NavLink className={className} to={navTo}>{text}</NavLink></span>
     }
 
     function NavElements() {
@@ -35,21 +38,23 @@ export default function NavBar() {
     return (
         <header>
             <NavLink className="logo" to="">
-                <span>João Arcanjo</span>
+                <span className="font-solitreo">João Arcanjo</span>
             </NavLink>
-            <nav ref={navRef}>
-                <NavElements/>
-                {isOpen &&
-                    <button onClick={() => {setOpen(false); menuState?.setState(false)}}  className='nav-btn nav-close-btn'>
-                        <FaTimes onClick={showNavbar}/>
-                    </button>
-                }
-            </nav>
-            {!isOpen &&
+            <div className="flex md:flex md:flex-grow flex-row justify-end space-x-1">
+                <nav ref={navRef}>
+                    <NavElements/>
+                    {isOpen &&
+                        <button onClick={() => {setOpen(false); menuState?.setState(false)}}  className='nav-btn nav-close-btn'>
+                            <FaTimes onClick={showNavbar}/>
+                        </button>
+                    }
+                </nav>
+                {!isOpen &&
                 <button onClick={() => {setOpen(true); menuState?.setState(true)}} className='nav-btn'>
                     <FaBars onClick={showNavbar}/>
                 </button>
             }
+            </div>
         </header>
     )
 }

@@ -6,6 +6,7 @@ import NavBar from './Navigation/NavBar';
 import "./App.css";
 import About from './sections/About';
 import { OpenInContext } from './Navigation/OpenMenu';
+import { Footer } from './sections/components/Footer';
 
 function AppRouter() {
   return (
@@ -33,7 +34,6 @@ function App() {
     <div>
       <OpenInContext.Provider value={currentOpenMenuContext}>
           <AppRouter/>
-          <div></div>
       </OpenInContext.Provider>
     </div>
   )
