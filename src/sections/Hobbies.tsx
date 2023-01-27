@@ -20,7 +20,7 @@ function HobbieElement({hobbie}: {hobbie: Hobbie}) {
 function MainInfo() {
     
     return (
-        <div className="space-y-5 px-10 py-5">
+        <div className="space-y-5">
             <h1 className="pt-3 flex justify-center text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">My Hobbies</h1>
         </div>
     )
@@ -48,7 +48,7 @@ function HobbiesInfo() {
     ]
     
     return (
-        <div className="grid place-items-center w-80">
+        <div className="grid place-items-center max-w-md">
             { hobbies.map(value => <HobbieElement hobbie={value}/>) }
         </div> 
     )

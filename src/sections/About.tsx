@@ -35,7 +35,7 @@ function ProjectItem() {
     const menuState = useMenuState();
 
     return (
-        <div className="bg-whiteColor lg:flex border-2 rounded-md p-2 w-full">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full">
             <div className="flow-root pt-2 mb-2">
                 <p className="float-left text-xl text-fifthColor">
                     QRreport
@@ -47,7 +47,7 @@ function ProjectItem() {
                     </button>}
             </div>
             {moreInfo &&
-            <>
+            <div>
                 <hr className="h-px bg-fifthColor"/>
                 <div className="pt-4">
                     <p className="mb-3 font-light text-justify text-gray-500">
@@ -55,16 +55,15 @@ function ProjectItem() {
                         It includes the development of a database, a backend server and a web application for the user to interact with the system.
                     </p>
                 </div>
-            </>}
+            </div>}
         </div>
     )
 }
 
 function Projects() {
-    
     return (
-        <div className="space-y-3 grid place-items-center w-80">
-            <h1 className="pt-3 flex justify-center mb-4 text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
+        <div className="space-y-3 grid place-items-center">
+            <h1 className="pt-3 flex justify-center mb-4 text-3xl font-bold tracking-tight text-fifthColor md:text-5xl lg:text-6xl">
                 My Projects
             </h1>
             <ProjectItem/>
@@ -74,7 +73,7 @@ function Projects() {
 
 function MainInfo() {
     return (
-        <div className="space-y-5 px-10 py-5">
+        <div className="space-y-5 px-10 py-5 max-w-md">
             <div className="title space-y-2">
                 <h1 className="pt-3 flex justify-center text-5xl font-bold tracking-tight text-fifthColor hover:text-fourthColor md:text-5xl lg:text-6xl dark:text-white">João Arcanjo</h1>
                 <p> (Just Arcanjo, for friends) </p>
@@ -93,7 +92,7 @@ function About() {
     return (
         <div className="grid place-items-center h-screen">
             <MainInfo/>
-            <div className="space-y-5 divide-y px-10 py-10">
+            <div className="space-y-5 divide-y px-10 py-10 max-w-md">
                 <div></div>
                 <Projects/>
                 <Contacts/>
