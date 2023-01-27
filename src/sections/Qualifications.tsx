@@ -86,7 +86,7 @@ function HighSchool() {
 function Education() {
     
     return (
-        <div className="space-y-3 grid place-items-center max-w-md">
+        <div className="space-y-3 grid place-items-center w-80">
             <h1 className="pt-3 flex justify-center mb-4 text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
                 My Education
             </h1>
@@ -119,7 +119,7 @@ function Internship() {
 function Experience() {
 
     return (
-        <div className="space-y-3 grid place-items-center max-w-md">
+        <div className="space-y-3 grid place-items-center w-80">
             <h1 className="pt-3 flex justify-center mb-4 text-3xl font-bold tracking-tight leading-none text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
                 My Experience
             </h1>
