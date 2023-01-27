@@ -77,7 +77,7 @@ header .logo {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        transition: 0.5s;
+        transition: 0.3s;
         transform: translateX(150vh);
         padding: min(30vh, 10rem) 3em;
         background: hsl(0 0% 100% / 0.1);

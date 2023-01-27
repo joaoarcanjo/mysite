@@ -93,7 +93,7 @@ function About() {
     return (
         <div className="grid place-items-center h-screen">
             <MainInfo/>
-            <div className="space-y-5 divide-y px-10 py-10">
+            <div className="space-y-5 divide-y px-10 py-10 max-w-md">
                 <div></div>
                 <Projects/>
                 <Contacts/>
