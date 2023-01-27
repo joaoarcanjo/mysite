@@ -6,7 +6,6 @@ import NavBar from './Navigation/NavBar';
 import "./App.css";
 import About from './sections/About';
 import { OpenInContext } from './Navigation/OpenMenu';
-import { Footer } from './sections/components/Footer';
 
 function AppRouter() {
   return (
