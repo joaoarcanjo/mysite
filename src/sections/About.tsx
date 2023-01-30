@@ -9,19 +9,19 @@ import { useMenuState } from "../Navigation/OpenMenu";
 function Contacts() {
     
     return (
-        <div className="space-y-5 grid place-items-center">
+        <div className="space-y-5 grid place-items-center w-full">
             <h1 className="pt-3 flex justify-center mb-4 font-nunito font-extrabold text-4xl tracking-tight leading-none text-fifthColor">My Contacts</h1>
             <div className="space-y-2">
                 <div className="flex flex-row space-x-2">
-                    <ImLocation size={30}></ImLocation> 
+                    <ImLocation size={30} color={"green"}></ImLocation> 
                     <p className="font-nunito font-black">Alverca do Ribatejo</p>
                 </div>
                 <div className="flex flex-row space-x-2">
-                    <MdEmail size={30}></MdEmail> 
+                    <MdEmail size={30} color={"blue"}></MdEmail> 
                     <p className="font-nunito font-black">joaopedro.arcanjo@hotmail.com</p>
                 </div>
                 <div className="flex flex-row space-x-2">
-                    <MdSmartphone size={30}></MdSmartphone> 
+                    <MdSmartphone size={30} color={"#222222"}></MdSmartphone> 
                     <p className="font-nunito font-black">(+351) 965536775</p>
                 </div>
             </div>
@@ -35,7 +35,7 @@ function ProjectItem() {
     const menuState = useMenuState();
 
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full">
+        <div className="bg-whiteColor border-2 rounded-md p-2 shadow-xl w-full">
             <div className="flow-root pt-2 mb-2">
                 <p className="float-left text-xl font-nunito font-black text-fifthColor">
                     QRreport
@@ -63,7 +63,7 @@ function ProjectItem() {
 function Projects() {
     
     return (
-        <div className="space-y-3 grid place-items-center w-80">
+        <div className="space-y-3 grid place-items-center w-96 max-w-xs">
             <h1 className="pt-3 flex justify-center mb-4 font-nunito font-extrabold text-4xl tracking-tight leading-none text-fifthColor">
                 My Projects
             </h1>
@@ -92,7 +92,7 @@ function About() {
     return (
         <div className="grid place-items-center h-screen">
             <MainInfo/>
-            <div className="space-y-5 grid place-items-center divide-y px-10 py-10">
+            <div className="space-y-5 grid place-items-center divide-y py-5">
                 <div></div>
                 <Projects/>
                 <Contacts/>

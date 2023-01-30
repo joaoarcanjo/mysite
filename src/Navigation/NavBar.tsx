@@ -19,7 +19,9 @@ export default function NavBar() {
 
     const NavElement = ({navTo, text}: { navTo: string, text: string }) => {
 
-        const className = isOpen ? "font-nunito font-extrabold text-4xl hover:animate-pulse" : "font-nunito font-extrabold text-2xl hover:animate-pulse"
+        const className = 
+            isOpen ? "font-nunito font-extrabold text-3xl hover:animate-pulse" 
+            : "font-nunito font-extrabold text-2xl hover:animate-pulse"
 
         return <span onClick={showNavbar}><NavLink className={className} to={navTo}>{text}</NavLink></span>
     }
@@ -36,7 +38,7 @@ export default function NavBar() {
     }
 
     return (
-        <header>
+        <header className="bg-whiteColor">
             <NavLink className="logo" to="">
                 <span className="font-solitreo">João Arcanjo</span>
             </NavLink>

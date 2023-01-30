@@ -8,7 +8,7 @@ function Master() {
     const menuState = useMenuState();
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Master's degree
@@ -30,7 +30,7 @@ function Master() {
             <div className="space-y-1">
                 <p></p>
                 <p>Final media: --</p>
-                <p>Tese grade: --</p>
+                <p>Thesis grade: --</p>
             </div>
         </div>
     )
@@ -39,7 +39,7 @@ function Master() {
 function Bachelor() {
 
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Bachelor's degree
@@ -63,7 +63,7 @@ function Bachelor() {
 function HighSchool() {
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     High School
@@ -86,7 +86,7 @@ function HighSchool() {
 function Education() {
     
     return (
-        <div className="space-y-3 grid place-items-center w-80">
+        <div className="space-y-3 grid place-items-center">
             <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fifthColor md:text-5xl lg:text-6xl dark:text-white">  
                 Education
             </h1>
@@ -100,7 +100,7 @@ function Education() {
 function Internship() {
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Internship
@@ -119,7 +119,7 @@ function Internship() {
 function Experience() {
 
     return (
-        <div className="space-y-3 grid place-items-center w-80">
+        <div className="space-y-3 grid place-items-center">
             <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
                 Experience
             </h1>
@@ -132,11 +132,12 @@ function Experience() {
 function Qualifications() {
     //TODO: remove the last <div></div> and the space-y-4, the problem is the space between footer and the other comps.
     return (
-        <div className="space-y-4 grid place-items-center h-screen">
-            <div className="space-y-5 px-10">
+        <div className="grid place-items-center h-screen">
+            <div className="space-y-5 grid place-items-center divide-y px-10 py-10">
                 <div></div>
                 <Education/>
                 <Experience/>
+                <div></div>
             </div>
             <Footer/>
         </div>

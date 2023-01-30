@@ -3,16 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-/*All colors*/
-:root{
-    --mainColor: #FFFFFF;
-    --secondColor: #247ba0;
-    --thirdColor: #CDD7D6;
-    --fourthColor: #F87060;
-    --fifthColor: #102542;
-}
-
+ 
 header{
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3); /*Under shadow*/
     display: flex;
@@ -20,21 +11,13 @@ header{
     justify-content: space-between;
     height: 60px;
     padding: 2rem 2rem;
-    background-color: var(--mainColor);
-    color: var(--fifthColor);
     min-width: 400px;
 }
 
 nav a{
     margin: 0 2rem;
-    color: var(--fifthColor);
     text-decoration: none;
 }
-
-/*The color when we select the option*/
-nav a:hover{
-    color: var(--fourthColor); 
-}  
 
 header .nav-btn{
     visibility: hidden;
@@ -42,7 +25,6 @@ header .nav-btn{
 
 header .logo {
     font-family: "Times New Roman", Times, serif;
-    color:var(--fifthColor);
     font-size: 22px;
     text-decoration: none;
 }
@@ -55,16 +37,10 @@ header .logo {
         background: transparent;
         border: none;
         outline: none;
-        color: var(--fifthColor);
         visibility: visible;
         opacity: 1;
         font-size: 1.8rem;
     }
-
-    /*The color when we select the option*/
-    header .nav-btn:hover{
-        color: var(--fourthColor); 
-    }  
 
     header nav{
         position: fixed;
@@ -92,7 +68,6 @@ header .logo {
         position: absolute;
         top: 1rem;
         right: 2rem;
-        color: var(--fifthColor); 
     }
 
     nav a{
