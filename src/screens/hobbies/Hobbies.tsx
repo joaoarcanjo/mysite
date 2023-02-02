@@ -62,7 +62,7 @@ function HobbiesInfo() {
 export function Hobbies() {
     return (
         <div className="h-screen">
-        <div className="space-y-5 grid place-items-center py-5 px-10">
+        <div className="space-y-5 grid place-items-center py-5 px-2">
             <div className="max-w-md laptop:max-w-7xl grid place-items-center">
                 <MainInfo/>
                 <HobbiesInfo/>
