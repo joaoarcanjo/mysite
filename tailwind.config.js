@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     colors: {
       thirdColor: '#CDD7D6',
-      fourthColor: '#F87060',
+      fourthColor: '#F87000',
       fifthColor: '#102542',
       whiteColor: '#FFFFFF'
     },

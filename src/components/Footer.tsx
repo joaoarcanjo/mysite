@@ -7,8 +7,8 @@ const footerIconsColor = {color: "#CDD7D6"}
 export function Footer() {
     return (
         //TODO: colocar todos os links num ficheiro para ser mais facil alterar futuramente.
-        <footer className="bg-fifthColor text-center w-full">
-            <div className="m-2">
+        <footer className="bg-fifthColor bottom-0 right-0 p-4 text-center w-full">
+            <div className="">
                 <a href="https://www.instagram.com/joao__arcanjo/" type="button" style={footerIconsColor} className="rounded-full border-2 leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <BsInstagram style={footerIconsColor} className="w-5 h-full mx-auto"></BsInstagram>
                 </a>

@@ -1,5 +1,5 @@
 //import { useMenuState } from "../Navigation/OpenMenu"
-import { Footer } from "./components/Footer"
+import { Footer } from "../../components/Footer"
 
 type Hobbie = {
     imageSrc: string,
@@ -30,30 +30,30 @@ function HobbiesInfo() {
 
     let hobbies: Hobbie[] = [
         {
-            imageSrc: require('./hobbies_photos/tecnologia.jpg'),
+            imageSrc: require('./images/tecnologia.jpg'),
             title: 'Technology',
             description: 'I\'ve been fascinated by technology since i was very young, nowadays all gadgets and new techonologies catch my atention, being an apologist for their integration into our daily, in a moderate way.'
         },
         {
-            imageSrc: require('./hobbies_photos/arcanjo_eye.jpg'),
+            imageSrc: require('./images/arcanjo_eye.jpg'),
             title: 'Photograpy',
             description: 'Taking pictures is one of the things i like to do most in my free time, namely when I\'m going to discover some new place, my camera is something i never forget to take. You can find some of my photos on my instagram page.'
         },
         {
-            imageSrc: require('./hobbies_photos/bicicleta.jpg'),
+            imageSrc: require('./images/bicicleta.jpg'),
             title: 'Sports',
             description: 'I\'m a big fan of sports, for 16 years of my life I practiced swimming. I like watching football and others sports games with friends and when i have some free time i like to go cycling and skateboarding.'
             //Taking pictures is one of the things I like to do most in my spare time, namely when I'm going to discover some new place, you can find some of my work <a href="https://www.instagram.com/arcanjo_eye/" className="no-underline hover:underline">here</a>.
         },
         {
-            imageSrc: require('./hobbies_photos/cars.jpg'),
+            imageSrc: require('./images/cars.jpg'),
             title: 'Cars',
             description: 'Since I can remember being people, cars have always been a great passion that has grown and remains until today. I\'m that guy who gets hysterical when sees an unusual car on the street.'
         }  
     ]
     
     return (
-        <div className=" grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-3 place-items-center">
+        <div className=" grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 place-items-center">
             { hobbies.map((value, key) => <HobbieElement hobbie={value} key={key}/>) }
         </div> 
     )
@@ -61,10 +61,14 @@ function HobbiesInfo() {
 
 export function Hobbies() {
     return (
-        <div className="grid place-items-center h-screen">
-            <MainInfo/>
-            <HobbiesInfo/>
-            <Footer/>
+        <div className="h-screen">
+        <div className="space-y-5 grid place-items-center py-5 px-10">
+            <div className="max-w-md laptop:max-w-7xl grid place-items-center">
+                <MainInfo/>
+                <HobbiesInfo/>
+            </div>
         </div>
+        <Footer/>
+    </div>
     )   
 }

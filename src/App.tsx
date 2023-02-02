@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Qualifications from './sections/Qualifications';
-import { Hobbies } from './sections/Hobbies';
+import Qualifications from './screens/qualifications/Qualifications';
+import { Hobbies } from './screens/hobbies/Hobbies';
 import NavBar from './Navigation/NavBar';
 import "./App.css";
-import About from './sections/About';
+import About from './screens/about/About';
 import { OpenInContext } from './Navigation/OpenMenu';
 
 function AppRouter() {

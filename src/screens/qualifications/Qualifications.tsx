@@ -1,14 +1,13 @@
-import "./style/About.css"
-import { Footer } from "./components/Footer";
+import { Footer } from "../../components/Footer";
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { useMenuState } from "../Navigation/OpenMenu";
+import { useMenuState } from "../../Navigation/OpenMenu";
 
 function Master() {
 
     const menuState = useMenuState();
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Master's degree
@@ -22,10 +21,14 @@ function Master() {
                     }
                     <p>)</p>
                 </div>
-  
-                <p className="float-left text-fifthColor">
-                    Informatic Engineering (I. Security)
-                </p>
+                <div className="space-y-2">
+                    <p className="w-full text-fifthColor">
+                        Informatic Engineering (I. Security)
+                    </p>
+                    <a href="https://ciencias.ulisboa.pt/">
+                        <img className="object-fill h-10 w-30" alt="Faculdade de Ciências da Universidade de Lisboa" src={require('./images/fcul.png')}/>
+                    </a>
+                </div>
             </div>
             <div className="space-y-1">
                 <p></p>
@@ -39,7 +42,7 @@ function Master() {
 function Bachelor() {
 
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Bachelor's degree
@@ -47,9 +50,12 @@ function Bachelor() {
                 <p className="text-xl text-fifthColor">
                     ISEL (2019-2022)
                 </p>
-                <p className="float-left text-fifthColor">
+                <p className="w-full text-fifthColor">
                     Informatic and Computer Engineering
                 </p>
+                <a href="https://www.isel.pt/">
+                    <img className="object-fill h-14 w-30" alt="Instituto Superior de Engenharia de Lisboa logo" src={require('./images/isel.png')}/>
+                </a>
             </div>
             <div className="space-y-1">
                 <p></p>
@@ -63,7 +69,7 @@ function Bachelor() {
 function HighSchool() {
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
+        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     High School
@@ -71,9 +77,12 @@ function HighSchool() {
                 <p className="text-xl text-fifthColor">
                     ESGC (2016-2019)
                 </p>
-                <p className="float-left text-fifthColor">
+                <p className="w-full text-fifthColor">
                     Science and Technology 
                 </p>
+                <a href="https://www.esgc.pt/portal/index.php">
+                    <img className="object-fill h-10 w-30" alt="Escola Secundária de Gago Coutinho logo" src={require('./images/esgc.png')}/>
+                </a>
             </div>
             <div className="space-y-1">
                 <p></p>
@@ -100,7 +109,7 @@ function Education() {
 function Internship() {
     
     return (
-        <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-10 shadow-xl">
+         <div className="bg-whiteColor border-2 rounded-md p-2 w-full space-y-3 shadow-xl">
             <div className="w-full">
                 <p className="text-xl text-fifthColor font-bold">
                     Internship
@@ -108,18 +117,22 @@ function Internship() {
                 <p className="text-xl text-fifthColor">
                     SKY (2022)
                 </p>
-                <p className="float-left text-fifthColor">
+                <p className="w-full text-fifthColor">
                     Junior Backend Developer Apprentice 
                 </p>
+                <a href="https://www.linkedin.com/company/skyportugal/">
+                    <img className="object-fill h-10 w-30" alt="Sky logo" src={require('./images/sky.png')}/>
+                </a>
             </div>
-        </div>
+            <div></div>
+     </div>
     )
 }
 
 function Experience() {
 
     return (
-        <div className="space-y-3 grid place-items-center">
+        <div className="space-y-3">
             <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fifthColor md:text-5xl lg:text-6xl dark:text-white">
                 Experience
             </h1>
@@ -132,15 +145,15 @@ function Experience() {
 function Qualifications() {
     //TODO: remove the last <div></div> and the space-y-4, the problem is the space between footer and the other comps.
     return (
-        <div className="grid place-items-center h-screen">
-            <div className="space-y-5 grid place-items-center divide-y px-10 py-10">
-                <div></div>
+        <div className="h-screen">
+        <div className="space-y-5 grid place-items-center py-5 px-10">
+            <div className="flex max-w-md laptop:max-w-4xl grid laptop:grid-cols-2 laptop:gap-20">
                 <Education/>
                 <Experience/>
-                <div></div>
             </div>
-            <Footer/>
         </div>
+        <Footer/>
+    </div>
     )   
 }
 

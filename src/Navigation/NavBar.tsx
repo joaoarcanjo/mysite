@@ -40,7 +40,7 @@ export default function NavBar() {
     return (
         <header className="bg-whiteColor">
             <NavLink className="logo" to="">
-                <span className="font-solitreo">João Arcanjo</span>
+                <span className="font-solitreo text-fourthColor">João Arcanjo</span>
             </NavLink>
             <div className="flex md:flex md:flex-grow flex-row justify-end space-x-1">
                 <nav ref={navRef}>
