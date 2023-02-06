@@ -6,6 +6,14 @@ import { BiDownArrow, BiUpArrow } from "react-icons/bi"
 import { Footer } from "../../components/Footer";
 import { useMenuState } from "../../Navigation/OpenMenu";
 
+const Skill = ({newSkill}: { newSkill: string }) => {
+
+    return (
+        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fifthColor hover:bg-firstColor transition-colors">
+            {newSkill}
+        </span>
+    )
+}
 
 function Skills() {
 
@@ -16,33 +24,32 @@ function Skills() {
             </h1>
             <div className="space-y-3">
                 <div>
-                    <h3 className="text-left w-full font-nunito">Soft skills:</h3>
+                    <h3 className="text-left w-full font-nunito text-fifthColor">Soft skills:</h3>
                     <ul className="flex flex-wrap gap-2">
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Time management</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Networking</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Responsability</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Teamwork</span>    
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Communication</span>    
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Creativity</span>    
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Adaptability</span>
+                        <Skill newSkill="Time management"/>
+                        <Skill newSkill="Networking"/>
+                        <Skill newSkill="Responsability"/>
+                        <Skill newSkill="Teamwork"/>
+                        <Skill newSkill="Creativity"/>
+                        <Skill newSkill="Adaptability"/>
                     </ul>
                 </div>
                 <div>
-                    <h3 className="text-left w-full font-nunito">Hard skills:</h3>
+                    <h3 className="text-left w-full font-nunito text-fifthColor">Hard skills:</h3>
                     <ul className="flex flex-wrap gap-2">
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Javascript</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Java</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Kotlin</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Assembly</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Postgres</span>  
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">SQLServer</span>  
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Typescript</span>    
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">C</span>   
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">C#</span>     
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">.NET</span>  
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Spring boot</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">React</span>
-                        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fourthColor hover:bg-fifthColor transition-colors">Android</span>
+                        <Skill newSkill="Javascript"/>
+                        <Skill newSkill="Java"/>
+                        <Skill newSkill="Kotlin"/>
+                        <Skill newSkill="Assembly"/>
+                        <Skill newSkill="Postgres"/>
+                        <Skill newSkill="SQLServer"/>
+                        <Skill newSkill="Typescript"/>
+                        <Skill newSkill="C"/>
+                        <Skill newSkill="C#"/>
+                        <Skill newSkill=".NET"/>
+                        <Skill newSkill="Spring boot"/>
+                        <Skill newSkill="React"/>
+                        <Skill newSkill="Android"/>
                     </ul>
                 </div>
             </div>
@@ -58,15 +65,15 @@ function Contacts() {
             <div className="space-y-2">
                 <div className="flex flex-row space-x-2">
                     <ImLocation size={30} color={"green"}></ImLocation> 
-                    <p className="font-nunito font-black">Alverca do Ribatejo</p>
+                    <p className="font-nunito font-black text-fifthColor">Alverca do Ribatejo</p>
                 </div>
                 <div className="flex flex-row space-x-2">
                     <MdEmail size={30} color={"blue"}></MdEmail> 
-                    <p className="font-nunito font-black">joaopedro.arcanjo@hotmail.com</p>
+                    <p className="font-nunito font-black text-fifthColor">joaopedro.arcanjo@hotmail.com</p>
                 </div>
                 <div className="flex flex-row space-x-2">
                     <MdSmartphone size={30} color={"#222222"}></MdSmartphone> 
-                    <p className="font-nunito font-black">(+351) 965536775</p>
+                    <p className="font-nunito font-black text-fifthColor">(+351) 965536775</p>
                 </div>
             </div>
         </div> 
@@ -92,9 +99,9 @@ function ProjectItem() {
             </div>
             {moreInfo &&
             <div className="w-full">
-                <hr className="h-px bg-fifthColor"/>
+                <hr className="h-px"/>
                 <div className="pt-4">
-                    <p className="mb-3 font-nunito text-md text-justify text-gray-500">
+                    <p className="mb-3 font-nunito text-md text-justify text-fourthColor">
                         This project was developed as a final project for my degree. The objective was to develop a system to make it easier to report anomalies that may occur in a company, using only a telephone and a qrcode that is close to the faulty device.
                         It includes the development of a database, a backend server and a web application for the user to interact with the system.
                     </p>
@@ -120,13 +127,13 @@ function MainInfo() {
     return (
         <div className="space-y-5 py-5">
             <div className="title space-y-2">
-                <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fifthColor hover:text-fourthColor md:text-5xl lg:text-6xl dark:text-white">João Arcanjo</h1>
+                <h1 className="pt-3 flex justify-center text-5xl font-nunito font-black text-fourthColor hover:text-firstColor md:text-5xl lg:text-6xl dark:text-white">João Arcanjo</h1>
             </div>
             <div className="bg-black space-y-10">
-                <p className="font-nunito text-justify mb-3 text-fifthColor first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-fifthColor first-letter:mr-3 first-letter:float-left">
+                <p className="font-nunito text-justify mb-3 text-fifthColor first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-fourthColor first-letter:mr-3 first-letter:float-left">
                     I'm João Arcanjo, 21 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student.
                 </p>
-                <img className="border-t-8 border-fifthColor" alt="" src={require('./images/me.jpeg')}/>
+                <img className="border-t-8 border-firstColor" alt="" src={require('./images/me.jpeg')}/>
             </div>
         </div>
     )

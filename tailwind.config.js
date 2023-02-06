@@ -6,9 +6,11 @@ module.exports = {
   content: ["./src/**/*.{html,js,tsx}"],
   theme: {
     colors: {
-      thirdColor: '#CDD7D6',
-      fourthColor: '#F87000',
-      fifthColor: '#102542',
+      firstColor: '#f6ae2d',
+      secondColor: '#f26419',
+      thirdColor: '#55dde0',
+      fourthColor: '#33658a',
+      fifthColor: '#2F4858',
       whiteColor: '#FFFFFF'
     },
     extend: {

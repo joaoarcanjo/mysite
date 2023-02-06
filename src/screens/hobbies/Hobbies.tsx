@@ -11,8 +11,8 @@ function HobbieElement({hobbie}: {hobbie: Hobbie}) {
     return (
         <div className="m-8 flex flex-col justify-center items-center px-10">
             <img className="object-contain border-4 border-fifthColor rounded-full" alt="" src={hobbie.imageSrc}/>
-            <h1 className="pt-3 text-center font-mono font-semibold text-lg">{hobbie.title}</h1>
-            <p className="text-justify text-md first-letter:text-3xl first-letter:mr-3 font-nunito first-letter:float-left">{hobbie.description}</p>   
+            <h1 className="pt-3 text-center font-nunito font-semibold text-lg text-fifthColor font-bold text-3xl">{hobbie.title}</h1>
+            <p className="text-justify text-md first-letter:text-3xl first-letter:mr-3 font-nunito first-letter:float-left first-letter:text-fourthColor text-fifthColor">{hobbie.description}</p>   
         </div>
     )
 }

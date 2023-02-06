@@ -20,8 +20,8 @@ export default function NavBar() {
     const NavElement = ({navTo, text}: { navTo: string, text: string }) => {
 
         const className = 
-            isOpen ? "font-nunito font-extrabold text-3xl hover:animate-pulse" 
-            : "font-nunito font-extrabold text-2xl hover:animate-pulse"
+            isOpen ? "font-nunito font-extrabold text-3xl text-fifthColor hover:animate-pulse" 
+            : "font-nunito font-extrabold text-2xl text-fifthColor hover:animate-pulse"
 
         return <span onClick={showNavbar}><NavLink className={className} to={navTo}>{text}</NavLink></span>
     }

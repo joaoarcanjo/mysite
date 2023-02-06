@@ -9,7 +9,7 @@ function Master() {
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
-                <p className="text-xl text-fifthColor font-bold">
+                <p className="text-xl text-fourthColor font-bold">
                     Master's degree
                 </p>
                 <div className="flex justify-start margin:auto space-x-2 place-items-center">
@@ -32,8 +32,8 @@ function Master() {
             </div>
             <div className="space-y-1">
                 <p></p>
-                <p>Final media: --</p>
-                <p>Thesis grade: --</p>
+                <p className="text-fifthColor">Final grade: --</p>
+                <p className="text-fifthColor">Thesis grade: --</p>
             </div>
         </div>
     )
@@ -44,7 +44,7 @@ function Bachelor() {
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
-                <p className="text-xl text-fifthColor font-bold">
+                <p className="text-xl text-fourthColor font-bold">
                     Bachelor's degree
                 </p>
                 <p className="text-xl text-fifthColor">
@@ -59,8 +59,8 @@ function Bachelor() {
             </div>
             <div className="space-y-1">
                 <p></p>
-                <p>Final media: 16</p>
-                <p>Final project grade: 18</p>
+                <p className="text-fifthColor">Final grade: 16</p>
+                <p className="text-fifthColor">Final project grade: 18</p>
             </div>
         </div>
     )
@@ -71,7 +71,7 @@ function HighSchool() {
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 w-full divide-y space-y-3 shadow-xl">
             <div className="w-full">
-                <p className="text-xl text-fifthColor font-bold">
+                <p className="text-xl text-fourthColor font-bold">
                     High School
                 </p>
                 <p className="text-xl text-fifthColor">
@@ -86,7 +86,7 @@ function HighSchool() {
             </div>
             <div className="space-y-1">
                 <p></p>
-                <p>Final media: 15</p>
+                <p className="text-fifthColor">Final grade: 15</p>
             </div>
         </div>
     )
@@ -111,7 +111,7 @@ function Internship() {
     return (
          <div className="bg-whiteColor border-2 rounded-md p-2 w-full space-y-3 shadow-xl">
             <div className="w-full">
-                <p className="text-xl text-fifthColor font-bold">
+                <p className="text-xl text-fourthColor font-bold">
                     Internship
                 </p>
                 <p className="text-xl text-fifthColor">
