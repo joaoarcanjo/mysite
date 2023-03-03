@@ -131,7 +131,7 @@ function MainInfo() {
             </div>
             <div className="bg-black space-y-10">
                 <p className="font-nunito text-justify mb-3 text-fifthColor first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-fourthColor first-letter:mr-3 first-letter:float-left">
-                    I'm João Arcanjo, 21 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student.
+                    I'm João Arcanjo, 22 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student.
                 </p>
                 <img className="border-t-8 border-firstColor" alt="" src={require('./images/me.jpeg')}/>
             </div>
