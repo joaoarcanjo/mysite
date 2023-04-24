@@ -3,14 +3,14 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css"
 import { useMenuState } from "./OpenMenu";
-import Switch from "expo-dark-mode-switch";
+//import Switch from "expo-dark-mode-switch";
 
 export default function NavBar() {
 
     const navRef = useRef<HTMLDivElement>(null);
     const menuState = useMenuState();
     const [isOpen, setOpen] = useState(false);
-    const [value, setValue] = useState(true);
+    //const [value, setValue] = useState(true);
 
     const showNavbar = () => {
         navRef.current?.classList.toggle("responsive_nav")
