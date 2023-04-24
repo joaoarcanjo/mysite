@@ -6,6 +6,7 @@ import NavBar from './Navigation/NavBar';
 import "./App.css";
 import About from './screens/about/About';
 import { OpenInContext } from './Navigation/OpenMenu';
+import { Footer } from './commun/Footer';
 
 function AppRouter() {
   return (
@@ -16,6 +17,7 @@ function AppRouter() {
           <Route path="/qualifications" element={<Qualifications/>}></Route>
           <Route path="/Hobbies" element={<Hobbies/>}></Route>
         </Routes>
+        <Footer/>
       </Router>
   )
 }

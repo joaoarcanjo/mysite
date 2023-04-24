@@ -1,4 +1,3 @@
-import { Footer } from "../../components/Footer";
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import { useMenuState } from "../../Navigation/OpenMenu";
 
@@ -143,18 +142,15 @@ function Experience() {
 }
 
 function Qualifications() {
-    //TODO: remove the last <div></div> and the space-y-4, the problem is the space between footer and the other comps.
     return (
-        <div className="h-screen">
-        <div className="space-y-5 grid place-items-center py-5 px-10">
-            <div className="flex max-w-md laptop:max-w-4xl grid laptop:grid-cols-2 laptop:gap-20">
-                <Education/>
-                <Experience/>
+        <div className="min-h-screen">
+            <div className="space-y-5 grid place-items-center py-5 px-10">
+                <div className="flex max-w-md laptop:max-w-4xl grid laptop:grid-cols-2 laptop:gap-20">
+                    <Education/>
+                    <Experience/>
+                </div>
             </div>
-        </div>
-        <Footer/>
-    </div>
+        </div>  
     )   
 }
-
 export default Qualifications;

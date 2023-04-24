@@ -1,5 +1,4 @@
 //import { useMenuState } from "../Navigation/OpenMenu"
-import { Footer } from "../../components/Footer"
 
 type Hobbie = {
     imageSrc: string,
@@ -61,14 +60,13 @@ function HobbiesInfo() {
 
 export function Hobbies() {
     return (
-        <div className="h-screen">
-        <div className="space-y-5 grid place-items-center">
+         <div className="min-h-screen">
+            <div className="space-y-5 grid place-items-center py-2 px-3">
             <div className="max-w-md tablet:max-w-3xl laptop:max-w-7xl grid place-items-center">
                 <MainInfo/>
                 <HobbiesInfo/>
             </div>
-        </div>
-        <Footer/>
-    </div>
+            </div>
+        </div>  
     )   
 }

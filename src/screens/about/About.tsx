@@ -3,7 +3,6 @@ import { ImLocation } from "react-icons/im";
 import { MdEmail, MdSmartphone } from "react-icons/md";
 import { useState } from "react";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi"
-import { Footer } from "../../components/Footer";
 import { useMenuState } from "../../Navigation/OpenMenu";
 
 const Skill = ({newSkill}: { newSkill: string }) => {
@@ -131,7 +130,7 @@ function MainInfo() {
             </div>
             <div className="bg-black space-y-10">
                 <p className="font-nunito text-justify mb-3 text-fifthColor first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-fourthColor first-letter:mr-3 first-letter:float-left">
-                    I'm João Arcanjo, 22 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student.
+                    I'm João Arcanjo, 22 years, from Alverca do Ribatejo, Lisbon, Portugal and actually i am a master degree informatic enginner student with a specialization in security.
                 </p>
                 <img className="border-t-8 border-firstColor" alt="" src={require('./images/me.jpeg')}/>
             </div>
@@ -141,7 +140,7 @@ function MainInfo() {
 
 function About() {
     return (
-        <div className="h-screen">
+        <div className="min-h-screen">
             <div className="space-y-5 grid place-items-center py-5 px-10">
                 <div className="flex max-w-md laptop:max-w-4xl grid laptop:grid-cols-2 laptop:gap-40">
                     <div className="position-fixed left-0 top-0">
@@ -155,7 +154,6 @@ function About() {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )   
 }

@@ -3,13 +3,14 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css"
 import { useMenuState } from "./OpenMenu";
+import Switch from "expo-dark-mode-switch";
 
 export default function NavBar() {
 
     const navRef = useRef<HTMLDivElement>(null);
     const menuState = useMenuState();
-
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false);
+    const [value, setValue] = useState(true);
 
     const showNavbar = () => {
         navRef.current?.classList.toggle("responsive_nav")
@@ -30,12 +31,14 @@ export default function NavBar() {
 
         return (
             <>
+                
                 <NavElement key={'about'} navTo='' text='About'/>
                 <NavElement key={'hobbies'} navTo='hobbies' text='Hobbies'/>
                 <NavElement key={'qualifications'} navTo='qualifications' text='Qualifications'/>
             </>
         )
     }
+    //<Switch value={value} onChange={value => setValue(value)} />
 
     return (
         <header className="bg-whiteColor">
