@@ -92,8 +92,8 @@ function ProjectItem() {
         require('./images/qrrport/rate_work.png'),
     ];
 
-    const menuState = useMenuState();
     const [moreInfo, showMoreInfo] = useState(false);
+    const menuState = useMenuState();
     const [isLeftDisabled, setLeftDisabled] = useState(true);
     const [isRigthDisabled, setRigthDisabled] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
