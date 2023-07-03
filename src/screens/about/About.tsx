@@ -8,7 +8,7 @@ import { useMenuState } from "../../Navigation/OpenMenu";
 const Skill = ({newSkill}: { newSkill: string }) => {
 
     return (
-        <span className="bg-fourthColor font-nunito text-thirdColor text-sm rounded shadow-xl px-1 hover:text-fifthColor hover:bg-firstColor transition-colors">
+        <span className="bg-fourthColor font-nunito text-thirdColor text-md rounded shadow-xl px-1 hover:text-fifthColor hover:bg-firstColor transition-colors">
             {newSkill}
         </span>
     )
@@ -23,7 +23,7 @@ function Skills() {
             </h1>
             <div className="space-y-3">
                 <div>
-                    <h3 className="text-left w-full font-nunito text-fifthColor">Soft skills:</h3>
+                    <h3 className="text-left text-xl w-full font-nunito text-fifthColor">Soft skills:</h3>
                     <ul className="flex flex-wrap gap-2">
                         <Skill newSkill="Time management"/>
                         <Skill newSkill="Networking"/>
@@ -34,7 +34,7 @@ function Skills() {
                     </ul>
                 </div>
                 <div>
-                    <h3 className="text-left w-full font-nunito text-fifthColor">Hard skills:</h3>
+                    <h3 className="text-left text-xl w-full font-nunito text-fifthColor">Hard skills:</h3>
                     <ul className="flex flex-wrap gap-2">
                         <Skill newSkill="Javascript"/>
                         <Skill newSkill="Java"/>
@@ -80,9 +80,41 @@ function Contacts() {
 }
 
 function ProjectItem() {
+    const images = [
+        require('./images/qrrport/submit_report_page.png'),
+        require('./images/qrrport/login_page.png'),
+        require('./images/qrrport/add_room_device.png'),
+        require('./images/qrrport/change_category.png'),
+        require('./images/qrrport/deliver_work.png'),
+        require('./images/qrrport/list_tickets_page.png'),
+        require('./images/qrrport/profile_page.png'),
+        require('./images/qrrport/qrcode_popup.png'),
+        require('./images/qrrport/rate_work.png'),
+    ];
 
-    const [moreInfo, showMoreInfo] = useState(false);
     const menuState = useMenuState();
+    const [moreInfo, showMoreInfo] = useState(false);
+    const [isLeftDisabled, setLeftDisabled] = useState(true);
+    const [isRigthDisabled, setRigthDisabled] = useState(false);
+    const [currentImage, setCurrentImage] = useState(0);
+
+    function setNewIndex(isNext: boolean) {
+        if(isNext) {
+            if (currentImage + 1 < images.length) 
+                setCurrentImage(currentImage + 1)
+            if (currentImage === images.length - 2) 
+                setRigthDisabled(true)       
+            if (currentImage === 0 && isLeftDisabled)
+                setLeftDisabled(false)
+        } else {
+            if (currentImage - 1 >= 0) 
+                setCurrentImage(currentImage - 1)    
+            if (currentImage === 1) 
+                setLeftDisabled(true)
+            if (currentImage === images.length - 1 && isRigthDisabled) 
+                setRigthDisabled(false)
+        }
+    }
 
     return (
         <div className="bg-whiteColor border-2 rounded-md p-2 shadow-xl w-full">
@@ -99,11 +131,24 @@ function ProjectItem() {
             {moreInfo &&
             <div className="w-full">
                 <hr className="h-px"/>
-                <div className="pt-4">
-                    <p className="mb-3 font-nunito text-md text-justify text-fourthColor">
-                        This project was developed as a final project for my degree. The objective was to develop a system to make it easier to report anomalies that may occur in a company, using only a telephone and a qrcode that is close to the faulty device.
-                        It includes the development of a database, a backend server and a web application for the user to interact with the system.
-                    </p>
+                <div className="pt-4 grid laptop:grid-cols-8">
+                    <div className="col-span-4">
+                        <p className="mb-3 font-nunito text-justify text-lg text-fourthColor">
+                            This project was developed as a final project for my bachelor degree. The objective was to develop a system to make it easier to report anomalies that may occur in a company, using only a telephone and a qrcode that is close to the faulty device. 
+                            It includes the development of a database, a backend server and a web application for the user to interact with the system. 
+                        </p>
+                    </div>
+                    <div className="col-span-4 px-12">   
+                        <img className="" alt="" src={images[currentImage]}/>
+                        <div className="pt-2 grid grid-cols-4 px-7">
+                            <button disabled={isLeftDisabled} className= {`col-span-2 bg-sixthColor hover:bg-seventhColor rounded-l border-b-2 border-seventhColor ${isLeftDisabled && "opacity-50 cursor-not-allowed"}`} onClick={() => setNewIndex(false)}>
+                                Prev
+                            </button>
+                            <button disabled={isRigthDisabled} className={`col-span-2 bg-sixthColor hover:bg-seventhColor rounded-r border-b-2 border-seventhColor ${isRigthDisabled && "opacity-50 cursor-not-allowed"}`} onClick={() => setNewIndex(true)}>
+                                Next
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>}
         </div>
@@ -141,12 +186,12 @@ function MainInfo() {
 function About() {
     return (
         <div className="min-h-screen">
-            <div className="space-y-5 grid place-items-center py-5 px-10">
-                <div className="flex max-w-md laptop:max-w-4xl grid laptop:grid-cols-2 laptop:gap-40">
-                    <div className="position-fixed left-0 top-0">
+            <div className="space-y-2 grid place-items-center py-5 px-10">
+                <div className="flex max-w-md laptop:max-w-5xl grid laptop:grid-cols-7 laptop:gap-20">
+                    <div className="col-span-3 position-fixed left-0 top-0">
                         <MainInfo/>
                     </div>
-                    <div className="space-y-10 w-full divide-y overflow-auto">
+                    <div className="col-span-4 space-y-10 w-full divide-y overflow-auto">
                         <div></div>
                         <Projects/>
                         <Contacts/>

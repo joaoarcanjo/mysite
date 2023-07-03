@@ -11,6 +11,8 @@ module.exports = {
       thirdColor: '#55dde0',
       fourthColor: '#33658a',
       fifthColor: '#2F4858',
+      sixthColor: '#D2E1E1',
+      seventhColor: '#B5C0C0',
       whiteColor: '#FFFFFF'
     },
     extend: {
